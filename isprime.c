@@ -4,8 +4,9 @@
 #include <stdbool.h>
 int isPrime (int x) {
     bool prime = 1;
+    if(x%2 == 0) prime=0;
     if(x>1){
-    for(int a=2; a<x; a++) {
+    for(int a=3; a<sqrt(x); a=a+2) {
       if(x%a==0) prime = 0;
     }
   } else prime = 0;
